@@ -1,0 +1,1574 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy Birthday Anantuuu! 🎂</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@1,600;1,700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #0284c7;
+      --primary-hover: #0369a1;
+      --teal: #0d9488;
+      --pink: #f43f5e;
+      --rose-soft: #ffe4e6;
+      --amber: #f59e0b;
+      --sea-green: #0d9488;
+      --text-main: #0f172a;
+      --text: #0f172a;
+      --text-muted: #64748b;
+      --surface: rgba(255, 255, 255, 0.88);
+      --surface-border: rgba(255, 255, 255, 0.95);
+      --glow: 0 24px 60px -12px rgba(2, 132, 199, 0.22);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-tap-highlight-color: transparent;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #e0f2fe 0%, #f0fdf4 45%, #fff1f2 100%);
+      color: var(--text);
+      padding: 24px;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    /* Ambient Background Orbs */
+    .blob {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(80px);
+      z-index: 0;
+      opacity: 0.65;
+      animation: drift 14s infinite alternate ease-in-out;
+      pointer-events: none;
+    }
+
+    .blob-1 {
+      width: 380px;
+      height: 380px;
+      background: #7dd3fc;
+      top: -80px;
+      left: -80px;
+    }
+
+    .blob-2 {
+      width: 420px;
+      height: 420px;
+      background: #fbcfe8;
+      bottom: -100px;
+      right: -80px;
+      animation-delay: -5s;
+    }
+
+    .blob-3 {
+      width: 320px;
+      height: 320px;
+      background: #99f6e4;
+      bottom: 25%;
+      left: 10%;
+      animation-delay: -8s;
+    }
+
+    @keyframes drift {
+      0% { transform: translate(0, 0) scale(1); }
+      100% { transform: translate(35px, 45px) scale(1.08); }
+    }
+
+    /* Glass Container */
+    .card {
+      position: relative;
+      z-index: 10;
+      width: 100%;
+      max-width: 500px;
+      background: var(--surface);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid var(--surface-border);
+      border-radius: 32px;
+      padding: 40px 32px;
+      box-shadow: var(--glow), 0 2px 4px rgba(0, 0, 0, 0.02);
+      text-align: center;
+      transition: all 0.3s ease;
+    }
+
+    /* Progress Indicators */
+    .progress-track {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 30px;
+    }
+
+    .pill {
+      height: 8px;
+      width: 14px;
+      background: #e2e8f0;
+      border-radius: 10px;
+      transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    .pill.active {
+      width: 36px;
+      background: linear-gradient(90deg, var(--primary), #38bdf8);
+      box-shadow: 0 0 12px rgba(2, 132, 199, 0.45);
+    }
+
+    .pill.passed {
+      background: var(--teal);
+    }
+
+    /* Typography */
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 14px;
+      border-radius: 999px;
+      background: rgba(2, 132, 199, 0.1);
+      border: 1px solid rgba(2, 132, 199, 0.2);
+      color: var(--primary);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.3px;
+      margin-bottom: 14px;
+    }
+
+    h1 {
+      font-size: 29px;
+      font-weight: 800;
+      line-height: 1.25;
+      letter-spacing: -0.5px;
+      color: var(--text-main);
+      margin-bottom: 10px;
+    }
+
+    .headline-font {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      color: #e11d48;
+    }
+
+    p.subtext {
+      color: var(--text-muted);
+      font-size: 15px;
+      line-height: 1.6;
+      margin-bottom: 26px;
+    }
+
+    /* Floating Interactive Icons */
+    .hero-icon-wrapper {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 90px;
+      height: 90px;
+      border-radius: 28px;
+      background: linear-gradient(135deg, #f0f9ff, #fce7f3);
+      border: 1px solid rgba(255, 255, 255, 0.8);
+      box-shadow: 0 10px 20px -5px rgba(244, 63, 94, 0.15);
+      margin-bottom: 18px;
+      font-size: 42px;
+      animation: float 3s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0) rotate(0deg); }
+      50% { transform: translateY(-7px) rotate(2deg); }
+    }
+
+    /* Steps Display */
+    .step {
+      display: none;
+      animation: slideIn 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+
+    .step.active {
+      display: block;
+    }
+
+    @keyframes slideIn {
+      from { opacity: 0; transform: translateY(12px) scale(0.98); }
+      to { opacity: 1; transform: translateY(0) scale(1); }
+    }
+
+    /* Interactive Options */
+    .quiz-options {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+
+    .quiz-btn {
+      position: relative;
+      background: #ffffff;
+      border: 2px solid #edf2f7;
+      padding: 16px 18px;
+      border-radius: 18px;
+      font-size: 15px;
+      font-weight: 600;
+      color: #334155;
+      text-align: left;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      transition: all 0.22s cubic-bezier(0.2, 0.8, 0.2, 1);
+      box-shadow: 0 4px 6px -2px rgba(0, 0, 0, 0.03);
+    }
+
+    .quiz-btn:hover {
+      border-color: #38bdf8;
+      background: #f0f9ff;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 16px -4px rgba(2, 132, 199, 0.15);
+    }
+
+    .quiz-btn.correct {
+      border-color: #10b981 !important;
+      background: #ecfdf5 !important;
+      color: #065f46 !important;
+      box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.2);
+    }
+
+    .quiz-btn.wrong {
+      border-color: #f43f5e !important;
+      background: #fff1f2 !important;
+      color: #9f1239 !important;
+      animation: shake 0.35s ease;
+    }
+
+    @keyframes shake {
+      0%, 100% { transform: translateX(0); }
+      20%, 60% { transform: translateX(-6px); }
+      40%, 80% { transform: translateX(6px); }
+    }
+
+    /* Tap Counter Button */
+    .tap-target {
+      width: 140px;
+      height: 140px;
+      margin: 10px auto 28px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #f43f5e, #fb7185);
+      border: 6px solid #ffe4e6;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: #ffffff;
+      cursor: pointer;
+      user-select: none;
+      box-shadow: 0 16px 32px -8px rgba(244, 63, 94, 0.5);
+      transition: all 0.15s ease;
+      position: relative;
+    }
+
+    .tap-target:active {
+      transform: scale(0.92);
+      box-shadow: 0 8px 16px -4px rgba(244, 63, 94, 0.4);
+    }
+
+    .tap-target .count-number {
+      font-size: 44px;
+      font-weight: 800;
+      line-height: 1;
+    }
+
+    .tap-target .count-label {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-top: 4px;
+      opacity: 0.9;
+    }
+
+    .tap-cake-reveal {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      margin: 4px 0 18px;
+      animation: cakePop 0.75s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+    }
+
+    .tap-cake-reveal[hidden] {
+      display: none;
+    }
+
+    .tap-cake-reveal img {
+      width: min(230px, 70vw);
+      height: 210px;
+      object-fit: contain;
+      filter: drop-shadow(0 12px 16px rgba(244, 63, 94, 0.2));
+    }
+
+    .tap-cake-reveal p {
+      color: #be123c;
+      font-size: 0.95rem;
+      font-weight: 800;
+    }
+
+    @keyframes cakePop {
+      from { opacity: 0; transform: translateY(18px) scale(0.78) rotate(-5deg); }
+      70% { opacity: 1; transform: translateY(-4px) scale(1.04) rotate(2deg); }
+      to { opacity: 1; transform: translateY(0) scale(1) rotate(0); }
+    }
+
+    /* Primary Action Buttons */
+    .action-btn {
+      width: 100%;
+      padding: 16px 24px;
+      background: linear-gradient(135deg, #0284c7, #0369a1);
+      border: none;
+      border-radius: 20px;
+      font-size: 16px;
+      font-weight: 700;
+      color: #ffffff;
+      cursor: pointer;
+      transition: all 0.22s ease;
+      box-shadow: 0 12px 24px -6px rgba(2, 132, 199, 0.4);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    .action-btn:hover {
+      background: linear-gradient(135deg, #0369a1, #075985);
+      transform: translateY(-2px);
+      box-shadow: 0 16px 30px -6px rgba(2, 132, 199, 0.5);
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      background: linear-gradient(135deg, var(--primary) 0%, var(--sea-green) 100%);
+      color: #ffffff;
+      border: none;
+      padding: 14px 30px;
+      font-size: 1.02rem;
+      font-weight: 700;
+      border-radius: 50px;
+      cursor: pointer;
+      box-shadow: 0 10px 20px -5px rgba(2, 132, 199, 0.35);
+      transition: all 0.25s ease;
+    }
+    .btn:hover {
+      transform: translateY(-2px) scale(1.02);
+      box-shadow: 0 14px 24px -5px rgba(2, 132, 199, 0.45);
+    }
+    .btn:active {
+      transform: translateY(0) scale(0.98);
+    }
+
+    /* CHALLENGE 1: PHOTO GUESSING GRID */
+    .photos-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+      margin-bottom: 18px;
+    }
+    .polaroid {
+      background: #ffffff;
+      padding: 10px 10px 14px;
+      border-radius: 14px;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+      border: 2px solid #f1f5f9;
+      cursor: pointer;
+      transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+      position: relative;
+    }
+    .polaroid:hover {
+      transform: translateY(-5px) rotate(1deg);
+      border-color: var(--accent);
+    }
+    .polaroid.wrong {
+      animation: shake 0.4s ease;
+      border-color: #f87171;
+    }
+    .polaroid.correct {
+      border-color: #10b981;
+      transform: scale(1.04);
+      box-shadow: 0 0 20px rgba(16, 185, 129, 0.3);
+    }
+    .polaroid-img-box {
+      width: 100%;
+      height: 120px;
+      border-radius: 8px;
+      background: linear-gradient(135deg, #fbcfe8 0%, #bae6fd 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.2rem;
+      overflow: hidden;
+      margin-bottom: 8px;
+    }
+    .polaroid-img-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .polaroid-caption {
+      font-size: 0.84rem;
+      font-weight: 700;
+      color: #334155;
+    }
+
+    @keyframes shake {
+      0%, 100% { transform: translateX(0); }
+      20%, 60% { transform: translateX(-6px); }
+      40%, 80% { transform: translateX(6px); }
+    }
+
+    .feedback-msg {
+      min-height: 28px;
+      font-size: 0.92rem;
+      font-weight: 600;
+      margin-bottom: 14px;
+      transition: all 0.2s;
+    }
+    .feedback-msg.hint { color: #e11d48; }
+    .feedback-msg.success { color: #059669; }
+
+     /* Choice Cards Grid */
+    .choices-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+    .choice-card {
+      background: #ffffff;
+      border: 2px solid #e2e8f0;
+      border-radius: 18px;
+      padding: 16px 20px;
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--text-main);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    .choice-card:hover {
+      border-color: var(--primary);
+      background: #f0f9ff;
+      transform: translateX(4px);
+    }
+    .choice-card.selected {
+      border-color: var(--primary);
+      background: #e0f2fe;
+      color: var(--primary);
+    }
+
+    /* Memory slideshow */
+    .memory-player {
+      margin: 22px 0 18px;
+      padding: 14px;
+      border: 1px solid rgba(244, 63, 94, 0.16);
+      border-radius: 24px;
+      background: linear-gradient(145deg, rgba(255, 241, 242, 0.9), rgba(240, 249, 255, 0.95));
+      box-shadow: 0 12px 28px rgba(244, 63, 94, 0.1);
+    }
+
+    .memory-frame {
+      position: relative;
+      display: grid;
+      place-items: center;
+      width: 100%;
+      min-height: 260px;
+      overflow: hidden;
+      border: 7px solid #ffffff;
+      border-radius: 18px;
+      background: linear-gradient(135deg, #fbcfe8, #bae6fd);
+      box-shadow: 0 8px 20px rgba(15, 23, 42, 0.12);
+    }
+
+    .memory-frame img,
+    .memory-frame video {
+      display: block;
+      width: auto;
+      height: auto;
+      max-width: 100%;
+      max-height: min(68vh, 620px);
+      object-fit: contain;
+      animation: memoryReveal 0.55s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+    }
+
+    .memory-frame video {
+      background: #0f172a;
+    }
+
+    .memory-frame.is-changing img,
+    .memory-frame.is-changing video {
+      animation: memoryReveal 0.55s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+    }
+
+    @keyframes memoryReveal {
+      from { opacity: 0; transform: scale(1.06) rotate(-1deg); }
+      to { opacity: 1; transform: scale(1) rotate(0); }
+    }
+
+    .memory-media-message {
+      display: none;
+      position: absolute;
+      inset: 0;
+      place-items: center;
+      padding: 24px;
+      color: #475569;
+      font-size: 0.9rem;
+      font-weight: 700;
+      line-height: 1.5;
+      text-align: center;
+    }
+
+    .memory-media-message.visible {
+      display: grid;
+    }
+
+    .memory-caption {
+      min-height: 28px;
+      margin: 13px 0 8px;
+      color: #9f1239;
+      font-family: 'Playfair Display', serif;
+      font-size: 1.12rem;
+      font-style: italic;
+      font-weight: 700;
+    }
+
+    .memory-counter {
+      margin-bottom: 12px;
+      color: var(--text-muted);
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+    }
+
+    .memory-controls {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .memory-control {
+      min-width: 46px;
+      min-height: 42px;
+      padding: 8px 13px;
+      border: 1px solid rgba(2, 132, 199, 0.16);
+      border-radius: 14px;
+      background: #ffffff;
+      color: #0369a1;
+      font: inherit;
+      font-size: 0.9rem;
+      font-weight: 800;
+      cursor: pointer;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .memory-control:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 14px rgba(2, 132, 199, 0.14);
+    }
+
+    .memory-dots {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 7px;
+      margin-top: 13px;
+    }
+
+    .memory-dot {
+      width: 8px;
+      height: 8px;
+      padding: 0;
+      border: 0;
+      border-radius: 50%;
+      background: #cbd5e1;
+      cursor: pointer;
+      transition: all 0.25s ease;
+    }
+
+    .memory-dot.active {
+      width: 22px;
+      border-radius: 999px;
+      background: #f43f5e;
+    }
+
+    .memory-tools {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      margin: 0 0 18px;
+    }
+
+    .music-status {
+      min-height: 18px;
+      color: var(--text-muted);
+      font-size: 0.76rem;
+      line-height: 1.4;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .memory-frame img,
+      .memory-frame video {
+        animation: none;
+      }
+
+      .memory-control,
+      .memory-dot {
+        transition: none;
+      }
+
+      .tap-cake-reveal {
+        animation: none;
+      }
+    }
+
+    /* CHALLENGE 1: PHOTO GUESSING GRID */
+    .photos-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+      margin-bottom: 18px;
+    }
+    .polaroid {
+      background: #ffffff;
+      padding: 10px 10px 14px;
+      border-radius: 14px;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+      border: 2px solid #f1f5f9;
+      cursor: pointer;
+      transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+      position: relative;
+    }
+    .polaroid:hover {
+      transform: translateY(-5px) rotate(1deg);
+      border-color: var(--accent);
+    }
+    .polaroid.wrong {
+      animation: shake 0.4s ease;
+      border-color: #f87171;
+    }
+    .polaroid.correct {
+      border-color: #10b981;
+      transform: scale(1.04);
+      box-shadow: 0 0 20px rgba(16, 185, 129, 0.3);
+    }
+    .polaroid-img-box {
+      width: 100%;
+      height: 120px;
+      border-radius: 8px;
+      background: linear-gradient(135deg, #fbcfe8 0%, #bae6fd 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.2rem;
+      overflow: hidden;
+      margin-bottom: 8px;
+    }
+    .polaroid-img-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .polaroid-caption {
+      font-size: 0.84rem;
+      font-weight: 700;
+      color: #334155;
+    }
+
+    @keyframes shake {
+      0%, 100% { transform: translateX(0); }
+      20%, 60% { transform: translateX(-6px); }
+      40%, 80% { transform: translateX(6px); }
+    }
+
+    .feedback-msg {
+      min-height: 28px;
+      font-size: 0.92rem;
+      font-weight: 600;
+      margin-bottom: 14px;
+      transition: all 0.2s;
+    }
+    .feedback-msg.hint { color: #e11d48; }
+    .feedback-msg.success { color: #059669; }
+
+
+    /* CHALLENGE 2: BALLOONS TO SHOOT/POP */
+    .balloons-area {
+      display: flex;
+      justify-content: space-around;
+      align-items: flex-end;
+      height: 170px;
+      margin-bottom: 20px;
+      padding-top: 10px;
+    }
+    .balloon-wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      cursor: crosshair;
+      transition: transform 0.2s;
+      animation: floatBalloon 3s ease-in-out infinite alternate;
+    }
+    .balloon-wrapper:nth-child(2) { animation-delay: -1s; }
+    .balloon-wrapper:nth-child(3) { animation-delay: -2s; }
+    .balloon-wrapper:nth-child(4) { animation-delay: -1.5s; }
+
+    @keyframes floatBalloon {
+      0% { transform: translateY(0); }
+      100% { transform: translateY(-12px); }
+    }
+
+    .balloon {
+      width: 58px;
+      height: 72px;
+      border-radius: 50% 50% 50% 50% / 40% 40% 60% 60%;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: 800;
+      font-size: 1.2rem;
+      box-shadow: inset -6px -6px 12px rgba(0,0,0,0.12), 0 10px 18px rgba(0,0,0,0.1);
+      transition: all 0.2s;
+    }
+    .balloon:hover {
+      transform: scale(1.1);
+    }
+    .balloon::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 8px;
+      height: 6px;
+      background: inherit;
+      clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    }
+    .string {
+      width: 1px;
+      height: 38px;
+      background: rgba(100, 116, 139, 0.4);
+      margin-top: 4px;
+    }
+    .balloon-pink { background: linear-gradient(135deg, #f472b6, #ec4899); }
+    .balloon-blue { background: linear-gradient(135deg, #38bdf8, #0284c7); }
+    .balloon-green { background: linear-gradient(135deg, #2dd4bf, #0d9488); }
+    .balloon-gold { background: linear-gradient(135deg, #fde047, #f59e0b); }
+
+    .balloon-wrapper.popped .balloon {
+      animation: popBurst 0.25s forwards;
+    }
+    .balloon-wrapper.popped .string {
+      opacity: 0;
+    }
+    @keyframes popBurst {
+      0% { transform: scale(1); opacity: 1; }
+      50% { transform: scale(1.4); opacity: 0.8; }
+      100% { transform: scale(0); opacity: 0; visibility: hidden; }
+    }
+
+    .quotes-revealed-box {
+      background: #f8fafc;
+      border: 2px dashed #cbd5e1;
+      border-radius: 16px;
+      padding: 14px;
+      min-height: 90px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-bottom: 20px;
+      text-align: left;
+    }
+    .quote-pill {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      padding: 8px 12px;
+      border-radius: 10px;
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: #0369a1;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      animation: slideInQuote 0.3s ease forwards;
+    }
+    .quote-image-wrap {
+      width: 76px;
+      height: 76px;
+      flex: 0 0 76px;
+      border-radius: 10px;
+      overflow: hidden;
+      background: linear-gradient(135deg, #fbcfe8, #bae6fd);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .quote-image-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .quote-image-fallback {
+      display: none;
+      font-size: 2rem;
+    }
+    .quote-text {
+      flex: 1;
+      line-height: 1.5;
+    }
+    @keyframes slideInQuote {
+      from { opacity: 0; transform: translateY(6px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Wishes Parchment */
+    .wish-scroll {
+      background: #ffffff;
+      border: 1px solid #fed7aa;
+      border-radius: 24px;
+      padding: 24px;
+      text-align: left;
+      margin-bottom: 24px;
+      box-shadow: 0 8px 20px -6px rgba(245, 158, 11, 0.12);
+      position: relative;
+    }
+
+    .wish-scroll::before {
+      content: "✨";
+      position: absolute;
+      top: -12px;
+      right: 20px;
+      font-size: 22px;
+    }
+
+    .scroll-title {
+      font-size: 16px;
+      font-weight: 700;
+      color: #b45309;
+      margin-bottom: 8px;
+    }
+
+    .scroll-body {
+      font-size: 14px;
+      line-height: 1.6;
+      color: #475569;
+      margin-bottom: 14px;
+    }
+
+    .praise-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .chip {
+      background: #fffbeb;
+      border: 1px solid #fef3c7;
+      color: #92400e;
+      padding: 6px 12px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 600;
+    }
+
+    /* Canvas Confetti */
+    #confetti {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 999;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Ambient background glow -->
+  <div class="blob blob-1"></div>
+  <div class="blob blob-2"></div>
+  <div class="blob blob-3"></div>
+
+  <canvas id="confetti"></canvas>
+
+  <div class="card">
+    <!-- Progress Indicator -->
+    <div class="progress-track">
+      <div class="pill active" id="pill-0"></div>
+      <div class="pill" id="pill-1"></div>
+      <div class="pill" id="pill-2"></div>
+      <div class="pill" id="pill-3"></div>
+      <div class="pill" id="pill-4"></div>
+       <div class="pill" id="pill-5"></div>
+        <div class="pill" id="pill-6"></div>
+        <div class="pill" id="pill-7"></div>
+    </div>
+
+    <!-- Step 0: Cover Screen -->
+    <div class="step active" id="step-0">
+      <div class="hero-icon-wrapper">🎁</div>
+      <br>
+      <span class="badge">Special Birthday Quest</span>
+      <h1>Happy Birthday, <span class="headline-font">Anantuuu!</span></h1>
+      <p class="subtext">You have been summoned to complete three simple challenges before unlocking your birthday honors!</p>
+      <button class="action-btn" onclick="nextStep(1)">Accept Challenge 🚀</button>
+    </div>
+
+    <!-- Step 1: Challenge 1 -->
+    <div class="step" id="step-1">
+      <div class="hero-icon-wrapper">👑</div>
+      <br>
+      <span class="badge">Question 1 of 6</span>
+      <h1>The Ultimate Truth(JEE Advanced lvl)</h1>
+      <p class="subtext">Who officially holds supreme authority in the group?</p>
+      <div class="quiz-options">
+        <button class="quiz-btn" onclick="handleChoice(this, true, 1)">
+          <span> Obviously Anantuuu(The birthday girl)👑</span>
+          <span>→</span>
+        </button>
+        <button class="quiz-btn" onclick="handleChoice(this, false, 1)">
+          <span> Anamay Bhaiya (The bestestt)😘 </span>
+          <span>→</span>
+        </button>
+        <button class="quiz-btn" onclick="handleChoice(this, false, 1)">
+          <span> The Destruction queen "Shivi"👻</span>
+          <span>→</span>
+        </button>
+        <button class="quiz-btn" onclick="handleChoice(this, false, 1)">
+          <span> The Hitler don "Gunnu"😎</span>
+          <span>→</span>
+        </button>
+      </div>
+      <p id="alert-1" style="min-height: 20px; font-size: 14px; font-weight: 700;"></p>
+    </div>
+
+    <!-- Step 2: Challenge 2 -->
+    <div class="step" id="step-2">
+      <span class="badge">Task 2 of 6</span>
+      <h1>Send Wish Energy</h1>
+      <p class="subtext">Tap the beating heart 25 times to ignite the birthday candle flames!!</p>
+      <p class="subtext">Better be quick else the candle won't light!</p>
+      <div class="tap-target" id="heart-target" onclick="handleTap()">
+        <span class="count-number" id="tap-num">25</span>
+        <span class="count-label">taps to go</span>
+      </div>
+      <div class="tap-cake-reveal" id="tap-cake-reveal" hidden>
+        <img src="Ananta/birthday-cake.png" alt="A colorful birthday cake with lit candles">
+        <p>Wish made! The birthday cake is here! 🎂</p>
+      </div>
+    </div>
+
+    <!-- Step 3: Challenge 3 -->
+    <div class="step" id="step-3">
+      <div class="hero-icon-wrapper">🍰</div>
+      <br>
+      <span class="badge">Question 3 of 6</span>
+      <h1>The Slice Protocol(Olympiad lvl)</h1>
+      <p class="subtext">Who has the undeniable constitutional right to the biggest cake slice?</p>
+      <div class="quiz-options">
+        <button class="quiz-btn" onclick="handleChoice(this, true, 3)">
+          <span>The Birthday Girl (Unfortunately) 😇</span>
+          <span>→</span>
+        </button>
+        <button class="quiz-btn" onclick="handleChoice(this, false, 3)">
+          <span>Whoever runs to the table first 🥳</span>
+          <span>→</span>
+        </button>
+        <button class="quiz-btn" onclick="handleChoice(this, false, 3)">
+          <span>A strictly 50/50 split 🥱</span>
+          <span>→</span>
+        </button>
+        <button class="quiz-btn" onclick="handleChoice(this, false, 3)">
+          <span>As Bada bhai suggests 😁</span>
+          <span>→</span>
+        </button>
+      </div>
+      <p id="alert-3" style="min-height: 20px; font-size: 14px; font-weight: 700;"></p>
+    </div>
+
+  <div class="orb orb-1"></div>
+  <div class="orb orb-2"></div>
+  <div class="orb orb-3"></div>
+  <canvas id="confettiCanvas"></canvas>
+
+  <div class="quest-card">
+    <div class="progress-wrap">
+      <div class="prog-dot active" id="dot-0"></div>
+      <div class="prog-dot" id="dot-1"></div>
+      <div class="prog-dot" id="dot-2"></div>
+      <div class="prog-dot" id="dot-3"></div>
+      <div class="prog-dot" id="dot-4"></div>
+    </div>
+
+    <!-- STEP 4: PICK MY FAVORITE PICTURE -->
+    <div class="step" id="step-4">
+      <div class="step-badge">📸 Challenge 4 of 6</div>
+      <h1>Which is My Favorite Picture of You?</h1>
+      <p class="subtitle">One of these is secretly my all-time favorite photo of you. Can you guess which one it is?</p>
+      
+      <div class="photos-grid">
+        <!-- Photo 1 -->
+        <div class="polaroid" onclick="pickPhoto(1, this)">
+          <div class="polaroid-img-box"><img src="Ananta/SLEEPY.jpeg" alt="The Sleepy Head"></div>
+          <div class="polaroid-caption">The Sleepy Head </div>
+        </div>
+        <!-- Photo 2 (CORRECT FAVORITE) -->
+        <div class="polaroid" onclick="pickPhoto(2, this)">
+          <div class="polaroid-img-box"><img src="Ananta/DQ.jpeg" alt="Drama Queen"></div>
+          <div class="polaroid-caption">Drama Queen</div>
+        </div>
+        <!-- Photo 3 -->
+        <div class="polaroid" onclick="pickPhoto(3, this)">
+          <div class="polaroid-img-box"><img src="Ananta/FOODIE.jpeg" alt="A1 Chatori"></div>
+          <div class="polaroid-caption">A1 Chatori</div>
+        </div>
+        <!-- Photo 4 -->
+        <div class="polaroid" onclick="pickPhoto(4, this)">
+          <div class="polaroid-img-box"><img src="Ananta/ANGRY.jpeg" alt="The Angry Bird"></div>
+          <div class="polaroid-caption">The Angry Bird</div>
+        </div>
+      </div>
+
+      <div class="feedback-msg" id="photo-feedback">Tap on the photo you think I love the most!</div>
+      <button class="btn" id="photo-next-btn" style="display: none;" onclick="nextStep(5)">On to Balloon Shooting! 🎯</button>
+    </div>
+
+    <!-- STEP 5: AIM & SHOOT BALLOONS -->
+    <div class="step" id="step-5">
+      <div class="step-badge">🎈 Challenge 5 of 6</div>
+      <h1>Aim & Pop the Balloons!</h1>
+      <p class="subtitle">Each balloon holds a secret quote and compliment about you. Pop all 4 to unlock the next level!</p>
+
+      <div class="balloons-area">
+        <div class="balloon-wrapper" id="balloon-1" onclick="popBalloon(1, '💖 Warmest heart: You always make everyone feel loved.', 'Ananta/LOVE.jpeg', '💖')">
+          <div class="balloon balloon-pink">1</div>
+          <div class="string"></div>
+        </div>
+        <div class="balloon-wrapper" id="balloon-2" onclick="popBalloon(2, '⚡ Chief Energy Officer: Any boring day turns fun with you.', 'Ananta/FUN.jpeg', '⚡')">
+          <div class="balloon balloon-blue">2</div>
+          <div class="string"></div>
+        </div>
+        <div class="balloon-wrapper" id="balloon-3" onclick="popBalloon(3, '👑 Unmatched Style: Nobody pulls off chaos and class like you.', 'Ananta/CHAOS.jpeg', '👑')">
+          <div class="balloon balloon-green">3</div>
+          <div class="string"></div>
+        </div>
+        <div class="balloon-wrapper" id="balloon-4" onclick="popBalloon(4, '🌟 Best Sister Award: Forever grateful to have you in my corner.', 'Ananta/SISTER.jpeg', '🌟')">
+          <div class="balloon balloon-gold">4</div>
+          <div class="string"></div>
+        </div>
+      </div>
+
+      <div class="quotes-revealed-box" id="quotes-box">
+        <span style="color: #94a3b8; font-size: 0.85rem; text-align: center; margin: auto;">Pop a balloon above to read your quotes! ✨</span>
+      </div>
+
+      <button class="btn" id="balloon-next-btn" style="display: none;" onclick="nextStep(6)">See our memories 💌</button>
+    </div>
+
+    <!-- STEP 6: MEMORY SLIDESHOW -->
+    <div class="step" id="step-6">
+      <div class="step-badge">💌 A little trip down memory lane</div>
+      <h1>Our <span class="headline-font">Favorite Memories</span></h1>
+      <p class="subtitle">Every silly moment, every big smile, and all the love in between. 💕</p>
+
+      <div class="memory-player" aria-label="Birthday memory slideshow">
+        <div class="memory-frame" id="memory-frame">
+          <p class="memory-media-message" id="memory-media-message" role="status"></p>
+        </div>
+        <p class="memory-caption" id="memory-caption" aria-live="polite"></p>
+        <p class="memory-counter" id="memory-counter"></p>
+        <div class="memory-controls">
+          <button class="memory-control" type="button" aria-label="Previous memory" onclick="changeMemory(-1)">‹</button>
+          <button class="memory-control" id="memory-play-btn" type="button" onclick="toggleMemoryPlayback()">❚❚ Pause</button>
+          <button class="memory-control" type="button" aria-label="Next memory" onclick="changeMemory(1)">›</button>
+        </div>
+        <div class="memory-dots" id="memory-dots" aria-label="Choose a memory"></div>
+      </div>
+
+      <div class="memory-tools">
+        <button class="memory-control" id="music-btn" type="button" onclick="toggleMemoryMusic()">♫ Play memory lane song</button>
+        <p class="music-status" id="music-status" role="status">The memory song pauses the project music; the project music resumes when you leave Memory Lane.</p>
+        <audio id="project-music" src="massobeats - rose water (freetouse.com).mp3" loop preload="metadata"></audio>
+        <audio id="memory-music" src="Ananta/Woh Din Chhichhore 320 Kbps.mp3" preload="metadata"></audio>
+      </div>
+
+      <button class="btn" onclick="unlockFinale()">Finish the memory lane &amp; open your wishes 🎁</button>
+    </div>
+
+    <!-- Step 7: Finale Celebration -->
+    <div class="step" id="step-7">
+      <div class="hero-icon-wrapper">🎂</div>
+      <br>
+      <span class="badge">Mission Accomplished! 🌟</span>
+      <h1>Happy Birthday, <span class="headline-font">Anantuuuu!!</span></h1>
+      <p class="subtext">Every level unlocked! You deserve all the good things today and always.</p>
+
+      <div class="wish-scroll">
+        <div class="scroll-title">To the best sister and listener anyone could ask for:</div>
+        <div class="scroll-body">
+          Thank you for bringing so much cheer, fun, and brightness wherever you go. May this year be filled with adventures, pure happiness, and zero stress!
+          Always know that i am here for you no matter what the situation is. You can share and talk to me about anything anytime. Best keeper for a reason😎
+          I'm grateful for all the memories we've made and excited for the ones yet to come. And also for those daily ChatarPatars and random jokes.
+          Hope you have a blast today and always remember how much you are loved and appreciated. Happy Birthday, Anantuuu! 🎉
+        </div>
+        <div class="praise-chips">
+          <span class="chip">✨ Certified owner of SHUTAAPP!! 😂</span>
+          <span class="chip">🌸 Only person with 2 brain cells(one in each knee) 🤣</span>
+          <span class="chip">💖 Most pretty Sister(...pretty DUSHTT) 🫶</span>
+        </div>
+      </div>
+
+      <button class="action-btn" onclick="shootConfetti()">Pop More Confetti! 🎊</button>
+    </div>
+  </div>
+
+  <script>
+    let currentStep = 0;
+    let balloonsPopped = 0;
+    let correctPhotoFound = false;
+    let taps = 25;
+    let memoryIndex = 0;
+    let memoryTimer = null;
+    let memoryPlaying = true;
+    let memorySlideshowStarted = false;
+    const musicStartTime = 23;
+    const musicEndTime = 90;
+
+    const memories = [
+      { type: 'image', src: 'Ananta/BUTTERFLY.jpeg', caption: 'Choas++ but fun++++🤩' },
+      { type: 'image', src: 'Ananta/GARDEN.jpeg', caption: 'Not a single weak moment😋' },
+      { type: 'image', src: 'Ananta/GOI.jpeg', caption: 'Best duo for a reason😎' },
+      { type: 'video', src: 'Ananta/PENDING.mp4', caption: 'Drama queen, but make it iconic 👑' },
+      { type: 'image', src: 'Ananta/GUILTY.jpeg', caption: 'But who was the culprit? 🕵️‍♀️' },
+      { type: 'video', src: 'Ananta/HUG.mp4', caption: 'Cute and wholesome🫶' },
+      { type: 'image', src: 'Ananta/ICESKATE.jpeg', caption: 'Toughest yet the most enjoyed💪' },
+      { type: 'video', src: 'Ananta/BEST.mp4', caption: 'Next lvl coordination or wot😏' },
+      { type: 'image', src: 'Ananta/LONAVALA.jpeg', caption: 'Sun-kissed memories 🌞' },
+      { type: 'video', src: 'Ananta/PASTA.mp4', caption: 'Our forever foodie adventures 🍕' },
+      { type: 'image', src: 'Ananta/MD.jpeg', caption: 'A little chaos makes the best stories ✨' },
+      { type: 'image', src: 'Ananta/MOVIE.jpeg', caption: 'The sleepy-head moments are the cutest, iykyk😴' },
+      { type: 'video', src: 'Ananta/TRIP.mp4', caption: 'Woooohoooo🥳' },
+      { type: 'image', src: 'Ananta/LASTDAY.jpeg', caption: 'Missing from this moment🥹' },
+      { type: 'image', src: 'Ananta/SQUAD.jpeg', caption: 'Siblings goalss👻' },
+      { type: 'video', src: 'Ananta/LUNGHIDANCE.mp4', caption: 'Sober yet drunk🥴' },
+      { type: 'image', src: 'Ananta/TIGERPT.jpeg', caption: 'In vaadiyo mee...😌' },
+      { type: 'image', src: 'Ananta/TOWER.jpeg', caption: 'That broken stool will be go down in history😂' },
+      { type: 'video', src: 'Ananta/DARPOK.mp4', caption: 'Scaredyy catt...😖' },
+      { type: 'image', src: 'Ananta/TRAMPOLINE.jpeg', caption: 'IDK but it just too gud😍' },
+      { type: 'image', src: 'Ananta/ANGRY.jpeg', caption: 'That legendary angry-bird face 🌟' },
+      { type: 'video', src: 'Ananta/ARIGATO.mp4', caption: 'Missing some bunny ears🐰' },
+      { type: 'video', src: 'Ananta/DANGER.mp4', caption: 'Crazyy lvl shiittt🤯' },
+      { type: 'video', src: 'Ananta/PARK.mp4', caption: 'Just looking like a WOWWW🤣' }
+      // Add video memories here with: { type: 'video', src: 'Ananta/your-video.mp4', caption: 'Your caption' }
+    ];
+
+    function seekMemoryMusicToClipStart() {
+      const audio = document.getElementById('memory-music');
+      if (audio.currentTime < musicStartTime || audio.currentTime >= musicEndTime) {
+        audio.currentTime = musicStartTime;
+      }
+    }
+
+    document.getElementById('memory-music').addEventListener('loadedmetadata', seekMemoryMusicToClipStart);
+    document.getElementById('memory-music').addEventListener('timeupdate', () => {
+      const audio = document.getElementById('memory-music');
+      if (audio.currentTime >= musicEndTime) audio.currentTime = musicStartTime;
+    });
+
+    function updateMusicControls() {
+      const audio = document.getElementById('memory-music');
+      const button = document.getElementById('music-btn');
+      button.textContent = audio.paused ? '♫ Play memory lane song' : '♫ Pause memory lane song';
+    }
+
+    async function startBackgroundMusic() {
+      const audio = document.getElementById('project-music');
+      const status = document.getElementById('music-status');
+      if (!audio.paused) return;
+
+      try {
+        await audio.play();
+        status.textContent = 'Press for a better experience. 💕';
+        updateMusicControls();
+      } catch (error) {
+        status.textContent = audio.error
+          ? 'Could not play the project MP3. Check that the file is available and supported.'
+          : 'Autoplay was blocked. Tap or click anywhere to start the project music.';
+        updateMusicControls();
+      }
+    }
+
+    function startMusicFromGesture(event) {
+      if (event.target.closest && event.target.closest('#music-btn')) return;
+      startBackgroundMusic();
+    }
+
+    document.addEventListener('pointerdown', startMusicFromGesture, { once: true });
+    document.addEventListener('keydown', startMusicFromGesture, { once: true });
+    document.getElementById('memory-music').addEventListener('play', () => {
+      document.getElementById('project-music').pause();
+      updateMusicControls();
+    });
+    document.getElementById('memory-music').addEventListener('pause', updateMusicControls);
+    document.getElementById('project-music').addEventListener('play', updateMusicControls);
+
+    // Update the progress dots and changing the page
+    function nextStep(stepIndex) {
+      const previousStep = currentStep;
+      document.querySelectorAll('.step').forEach(s => s.classList.remove('active'));
+      const next = document.getElementById(`step-${stepIndex}`);
+      if (next) {
+        next.classList.add('active');
+        currentStep = stepIndex;
+        updateDots(stepIndex);
+        if (stepIndex === 6) startMemorySlideshow();
+        if (previousStep === 6 && stepIndex !== 6) {
+          document.getElementById('memory-music').pause();
+          startBackgroundMusic();
+        }
+      }
+    }
+    //Challenge 1 and 3: Multiple Choice Questions
+    function handleChoice(btn, isCorrect, stepNumber) {
+      const alertBox = document.getElementById(`alert-${stepNumber}`);
+      if (isCorrect) {
+        if(stepNumber === 1) {
+        btn.classList.add('correct');
+        alertBox.style.color = '#059669';
+        alertBox.textContent = 'Wese bhi bday advantage hai na, wrna reality to... 😜 BTW Correct! (+4marks) Unlocking next stage...';
+        setTimeout(() => nextStep(stepNumber + 1), 4500);
+      } if (stepNumber === 3) {
+        btn.classList.add('correct');
+        alertBox.style.color = '#059669';
+        alertBox.textContent = 'Asal me to pura Bhaiya ko hi de dena chahiye tha😝 Anyways Correct! (+4marks) Unlocking next stage...';
+        setTimeout(() => nextStep(stepNumber + 1), 4500);
+      }
+      } else {
+        btn.classList.add('wrong');
+        alertBox.style.color = '#e11d48';
+        alertBox.textContent = 'Practically YES! But Try Again! 😅';
+        setTimeout(() => btn.classList.remove('wrong'), 600);
+      }
+    }
+// Challenge 2: Tap the heart
+    function handleTap() {
+      if (taps > 1) {
+        taps--;
+        document.getElementById('tap-num').textContent = taps;
+      } else {
+        document.getElementById('heart-target').style.display = 'none';
+        document.getElementById('tap-cake-reveal').hidden = false;
+        setTimeout(() => nextStep(3), 1800);
+      }
+    }
+
+    /* Challenge 4: Photo selection */
+    function pickPhoto(number, el) {
+      if (correctPhotoFound) return;
+      const feedback = document.getElementById('photo-feedback');
+      const nextBtn = document.getElementById('photo-next-btn');
+
+
+      if (number === 2) {
+        // Correct favorite
+        correctPhotoFound = true;
+        el.classList.add('correct');
+        feedback.className = "feedback-msg success";
+        feedback.innerText = "🎯 Spot on! That picture is iconic and my absolute favorite memory of you!";
+        nextBtn.style.display = "inline-flex";
+        shootConfetti();
+      } else {
+        el.classList.add('wrong');
+        setTimeout(() => el.classList.remove('wrong'), 500);
+        feedback.className = "feedback-msg hint";
+        const hints = [
+          "Undoubtedly the best, but look for where you showed peak drama queen energy!",
+          "",
+          "Close! Food does always win for you, but there's an even more iconic one!",
+          "Very dangerously cute, but think of the one where your true goofy personality shone!"
+        ];
+        feedback.innerText = hints[number - 1] || "So close! Try another one 💕";
+      }
+    }
+
+    /* Challenge 5: Balloons */
+    function popBalloon(id, quoteText, imageSrc, fallbackEmoji) {
+      const balloonEl = document.getElementById(`balloon-${id}`);
+      if (balloonEl.classList.contains('popped')) return;
+
+      balloonEl.classList.add('popped');
+      balloonsPopped++;
+
+      const quotesBox = document.getElementById('quotes-box');
+      if (balloonsPopped === 1) quotesBox.innerHTML = '';
+
+      const quotePill = document.createElement('div');
+      quotePill.className = 'quote-pill';
+
+      const imageWrap = document.createElement('div');
+      imageWrap.className = 'quote-image-wrap';
+      const image = document.createElement('img');
+      image.alt = `Birthday memory ${id}`;
+      const fallback = document.createElement('span');
+      fallback.className = 'quote-image-fallback';
+      fallback.textContent = fallbackEmoji;
+      image.addEventListener('error', () => {
+        image.remove();
+        fallback.style.display = 'flex';
+      });
+      image.src = imageSrc;
+      imageWrap.append(image, fallback);
+
+      const quote = document.createElement('span');
+      quote.className = 'quote-text';
+      quote.textContent = quoteText;
+      quotePill.append(imageWrap, quote);
+      quotesBox.appendChild(quotePill);
+
+      shootConfetti();
+
+      if (balloonsPopped === 4) {
+        const btn = document.getElementById('balloon-next-btn');
+        btn.style.display = 'inline-flex';
+      }
+    }
+
+    
+    /* Challenge 6: Memory slideshow */
+    function startMemorySlideshow() {
+      if (!memorySlideshowStarted) {
+        memorySlideshowStarted = true;
+        renderMemory(memoryIndex);
+      }
+    }
+
+    function renderMemory(index) {
+      if (memoryTimer) clearTimeout(memoryTimer);
+      memoryTimer = null;
+
+      const memory = memories[index];
+      const frame = document.getElementById('memory-frame');
+      const message = document.getElementById('memory-media-message');
+      const oldMedia = frame.querySelector('img, video');
+      if (oldMedia) oldMedia.remove();
+      message.classList.remove('visible');
+      message.textContent = '';
+      frame.classList.remove('is-changing');
+      void frame.offsetWidth;
+      frame.classList.add('is-changing');
+
+      let media;
+      if (memory.type === 'video') {
+        media = document.createElement('video');
+        media.controls = true;
+        media.playsInline = true;
+        media.muted = true;
+        media.addEventListener('ended', () => {
+          if (memoryPlaying) changeMemory(1);
+        });
+      } else {
+        media = document.createElement('img');
+        media.alt = memory.caption;
+      }
+
+      media.addEventListener('error', () => {
+        message.textContent = `This memory could not be loaded. Check that "${memory.src}" exists relative to this HTML file.`;
+        message.classList.add('visible');
+      }, { once: true });
+      media.src = memory.src;
+      frame.appendChild(media);
+
+      document.getElementById('memory-caption').textContent = memory.caption;
+      document.getElementById('memory-counter').textContent = `${index + 1} / ${memories.length}`;
+      document.querySelectorAll('.memory-dot').forEach((dot, dotIndex) => {
+        dot.classList.toggle('active', dotIndex === index);
+        dot.setAttribute('aria-current', dotIndex === index ? 'true' : 'false');
+      });
+
+      const playButton = document.getElementById('memory-play-btn');
+      playButton.textContent = memoryPlaying ? '❚❚ Pause' : '▶ Play';
+      if (memoryPlaying && memory.type === 'image') {
+        memoryTimer = setTimeout(() => changeMemory(1), 5000);
+      } else if (memoryPlaying && memory.type === 'video') {
+        media.play().catch(() => {
+          document.getElementById('music-status').textContent = 'Press play on the video to watch this memory.';
+        });
+      }
+    }
+
+    function initializeMemoryDots() {
+      const dots = document.getElementById('memory-dots');
+      memories.forEach((memory, index) => {
+        const dot = document.createElement('button');
+        dot.className = 'memory-dot';
+        dot.type = 'button';
+        dot.setAttribute('aria-label', `Show memory ${index + 1}: ${memory.caption}`);
+        dot.addEventListener('click', () => {
+          memoryIndex = index;
+          renderMemory(memoryIndex);
+        });
+        dots.appendChild(dot);
+      });
+    }
+
+    function changeMemory(direction) {
+      memoryIndex = (memoryIndex + direction + memories.length) % memories.length;
+      renderMemory(memoryIndex);
+    }
+
+    function toggleMemoryPlayback() {
+      memoryPlaying = !memoryPlaying;
+      const media = document.querySelector('#memory-frame video');
+      if (memoryTimer) clearTimeout(memoryTimer);
+      memoryTimer = null;
+
+      if (media && !memoryPlaying) {
+        media.pause();
+      } else if (media && memoryPlaying) {
+        media.play().catch(() => {
+          document.getElementById('music-status').textContent = 'Press play on the video to watch this memory.';
+        });
+      } else if (memoryPlaying) {
+        memoryTimer = setTimeout(() => changeMemory(1), 5000);
+      }
+
+      document.getElementById('memory-play-btn').textContent = memoryPlaying ? '❚❚ Pause' : '▶ Play';
+    }
+
+    async function toggleMemoryMusic(forcePlay) {
+      const audio = document.getElementById('memory-music');
+      const projectAudio = document.getElementById('project-music');
+      const status = document.getElementById('music-status');
+      const shouldPlay = typeof forcePlay === 'boolean' ? forcePlay : audio.paused;
+
+      if (!shouldPlay) {
+        audio.pause();
+        status.textContent = 'Memory lane song paused. Project music will resume when you leave this section.';
+        updateMusicControls();
+        return;
+      }
+
+      projectAudio.pause();
+      seekMemoryMusicToClipStart();
+      try {
+        await audio.play();
+        status.textContent = 'Memory lane song is playing. 💕';
+        updateMusicControls();
+      } catch (error) {
+        await startBackgroundMusic();
+        status.textContent = audio.error
+          ? 'Could not play the memory lane MP3. Check that the file is available and supported.'
+          : 'Could not start the memory lane song. Check your browser audio settings.';
+      }
+    }
+
+    function unlockFinale() {
+      nextStep(7);
+      shootConfetti();
+    }
+
+    // Update the progress bar style with the active page
+    function updateDots(activeIdx) {
+      for (let i = 0; i <= 7; i++) {
+        const pill = document.getElementById(`pill-${i}`);
+        pill.className = 'pill';
+        if (i < activeIdx) pill.classList.add('passed');
+        if (i === activeIdx) pill.classList.add('active');
+      }
+    }
+
+    initializeMemoryDots();
+    updateMusicControls();
+    startBackgroundMusic();
+
+// confetti shots for the finale   
+     function goToStep(nextIdx) {
+      document.getElementById(`step-${step}`).classList.remove('active');
+      step = nextIdx;
+      document.getElementById(`step-${step}`).classList.add('active');
+      updatePills(step);
+
+      if (step === 7) {
+        shootConfetti();
+      }
+    }
+
+    // Confetti Engine
+    const canvas = document.getElementById('confetti');
+    const ctx = canvas.getContext('2d');
+    let confettiList = [];
+
+    function syncSize() {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    }
+    window.addEventListener('resize', syncSize);
+    syncSize();
+
+    function shootConfetti() {
+      const palette = ['#0284c7', '#f43f5e', '#0d9488', '#f59e0b', '#8b5cf6'];
+      for (let i = 0; i < 80; i++) {
+        confettiList.push({
+          x: window.innerWidth / 2,
+          y: window.innerHeight / 2,
+          vx: (Math.random() - 0.5) * 16,
+          vy: (Math.random() - 0.5) * 16 - 3,
+          color: palette[Math.floor(Math.random() * palette.length)],
+          size: Math.random() * 8 + 4,
+          rot: Math.random() * 360,
+          vRot: (Math.random() - 0.5) * 12
+        });
+      }
+    }
+
+    function loopConfetti() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      confettiList.forEach((c, index) => {
+        c.x += c.vx;
+        c.y += c.vy;
+        c.vy += 0.28; // gravity
+        c.rot += c.vRot;
+
+        ctx.save();
+        ctx.translate(c.x, c.y);
+        ctx.rotate((c.rot * Math.PI) / 180);
+        ctx.fillStyle = c.color;
+        ctx.fillRect(-c.size / 2, -c.size / 2, c.size, c.size);
+        ctx.restore();
+
+        if (c.y > window.innerHeight) {
+          confettiList.splice(index, 1);
+        }
+      });
+      requestAnimationFrame(loopConfetti);
+    }
+    loopConfetti();
+  </script>
+</body>
+</html>
